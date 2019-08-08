@@ -4,9 +4,10 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Responsive Expanding Column Layout Demo</title>
+<title>Edwin van der Palen</title>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.css" rel="stylesheet" type="text/css">
 <link href="https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 <style>* {
   box-sizing: border-box;
 }
@@ -20,7 +21,7 @@
 .strips__strip {
   will-change: width, left, z-index, height;
   position: absolute;
-  width: 20%;
+  width: 30%;
   min-height: 100vh;
   overflow: hidden;
   cursor: pointer;
@@ -31,13 +32,13 @@
   left: 0;
 }
 .strips__strip:nth-child(2) {
-  left: 20vw;
+  left: 30vw;
 }
 .strips__strip:nth-child(3) {
-  left: 40vw;
+  left: 60vw;
 }
 .strips__strip:nth-child(4) {
-  left: 60vw;
+  left: 90vw;
 }
 .strips__strip:nth-child(5) {
   left: 80vw;
@@ -344,9 +345,9 @@
             transform: translate3d(0, 0, 0);
   }
 }
-/* Demo purposes */
+
 body {
-  font-family: 'Open Sans';
+  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: geometricPrecision;
   line-height: 1.5;
@@ -369,6 +370,40 @@ h2 {
 p, .strip__inner-text > div {
   margin: 0 0 16px;
 }
+
+/* form styles */
+
+input[type=text],input[type=email], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  color:#000000;
+}
+
+input[type=submit] {
+  background-color: #8f0b66;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #790957;
+}
+
+.container {
+  border-radius: 5px;
+  padding: 20px;
+}
+
+/* end form styles */
 </style>
 </head>
 
@@ -376,60 +411,47 @@ p, .strip__inner-text > div {
 <section class="strips">
   <article class="strips__strip">
     <div class="strip__content">
-      <h1 class="strip__title" data-name="column__1">Column 1</h1>
+      <h1 class="strip__title" data-name="column__1">E-mail</h1>
       <div class="strip__inner-text">
-        <h2>Responsive Expanding Column Layout Demo</h2>
-        <div class="jquery-script-ads"><script type="text/javascript"><!--
-google_ad_client = "ca-pub-2783044520727903";
-/* jQuery_demo */
-google_ad_slot = "2780937993";
-google_ad_width = 728;
-google_ad_height = 90;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script></div>
+        <h2><a style="color:#ffffff;text-decoration:none;" href="mailto:site@edwinvanderpalen.nl">site@edwinvanderpalen.nl</a></h2>
       </div>
     </div>
   </article>
   <article class="strips__strip">
     <div class="strip__content">
-      <h1 class="strip__title" data-name="column__2">Column 2</h1>
+      <h1 class="strip__title" data-name="column__2">LinkedIn</h1>
       <div class="strip__inner-text">
-        <h2>Section 2</h2>
-        <p>Content 2</p>
+        <h2><a style="color:#ffffff;text-decoration:none;" href="https://www.linkedin.com/in/edwinvanderpalen/"><img src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg"></a></h2>
+        <p><a style="color:#ffffff;text-decoration:none;" href="https://www.linkedin.com/in/edwinvanderpalen/">https://www.linkedin.com/in/edwinvanderpalen/</a></p>
       </div>
     </div>
   </article>
   <article class="strips__strip">
     <div class="strip__content">
-      <h1 class="strip__title" data-name="column__3">Column 3</h1>
+      <h1 class="strip__title" data-name="column__4">Contact</h1>
       <div class="strip__inner-text">
-        <h2>Section 3</h2>
-        <p>Content 3</p>
+        <h2>Contact</h2>
+        <p>
+          <div class="container">
+            <form name="contact-form" method="POST" data-netlify="true">
+
+              <label for="fname">Naam</label>
+              <input type="text" id="fname" name="name" placeholder="Naam" required>
+
+              <label for="lname">E-mail</label>
+              <input type="email" id="lname" name="email" placeholder="E-mail" required>
+
+              <label for="subject">Bericht</label>
+              <textarea id="subject" name="message" placeholder="Bericht" style="height:200px"></textarea>
+
+              <input type="submit" value="Submit">
+            </form>
+</div>
+        </p>
       </div>
     </div>
   </article>
-  <article class="strips__strip">
-    <div class="strip__content">
-      <h1 class="strip__title" data-name="column__4">Column 4</h1>
-      <div class="strip__inner-text">
-        <h2>Section 4</h2>
-        <p>Content 4</p>
-      </div>
-    </div>
-  </article>
-  <article class="strips__strip">
-    <div class="strip__content">
-      <h1 class="strip__title" data-name="column__5">Column 5</h1>
-      <div class="strip__inner-text">
-        <h2>Section 5</h2>
-        <p>Content 5</p>
-      </div>
-    </div>
-  </article>
-  <i class="fa fa-close strip__close"></i> 
+  <i class="fa fa-close strip__close"></i>
 </section>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script>
@@ -438,11 +460,11 @@ var Expand = (function() {
   var tileLink = $('.strips__strip > .strip__content');
   var tileText = tileLink.find('.strip__inner-text');
   var stripClose = $('.strip__close');
-  
+
   var expanded  = false;
 
   var open = function() {
-      
+
     var tile = $(this).parent();
 
       if (!expanded) {
@@ -452,9 +474,9 @@ var Expand = (function() {
         stripClose.addClass('strip__close--show');
         stripClose.css('transition', 'all .6s 1s cubic-bezier(0.23, 1, 0.32, 1)');
         expanded = true;
-      } 
+      }
     };
-  
+
   var close = function() {
     if (expanded) {
       tile.removeClass('strips__strip--expanded');
